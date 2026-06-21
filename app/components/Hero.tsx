@@ -104,7 +104,7 @@ export default function Hero() {
                         {[
                             { name: "Python", icon: <FaPython /> },
                             { name: "SQL", icon: <FaDatabase /> },
-                            { name: "Airflow", icon: <SiApacheairflow /> },
+                            { name: "ETL", icon: <FaDatabase /> },
                             { name: "Power BI", icon: <FaChartBar /> },
                         ].map((item) => (
                             <span
