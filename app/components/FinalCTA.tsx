@@ -1,47 +1,85 @@
 export default function FinalCTA() {
     return (
-        <section className="py-24 bg-white">
+        <section
+            className="
+                py-28
+                relative
+                overflow-hidden
+                bg-white
+                dark:bg-slate-950
+            "
+        >
             <div className="max-w-7xl mx-auto px-6">
-                <div className="
-                    rounded-[40px]
-                    bg-gradient-to-r
-                    from-blue-600
-                    via-indigo-600
-                    to-purple-600
-                    text-white
-                    p-12
-                    text-center
-                    shadow-2xl
-                ">
-                    <p className="text-blue-100 font-semibold">
-                        OPEN TO OPPORTUNITIES
-                    </p>
+                <div
+                    className="
+                        group
+                        relative
+                        overflow-hidden
+                        rounded-[44px]
+                        bg-gradient-to-br
+                        from-blue-600
+                        via-indigo-600
+                        to-purple-700
+                        text-white
+                        p-12
+                        lg:p-16
+                        text-center
+                        shadow-2xl
+                        hover:-translate-y-2
+                        hover:shadow-blue-300/40
+                        transition-all
+                        duration-500
+                        dark:from-blue-700
+                        dark:via-indigo-800
+                        dark:to-slate-900
+                        dark:border
+                        dark:border-blue-500/20
+                    "
+                >
+                    <div className="absolute right-10 top-0 text-[140px] font-black text-white/10 select-none">
+                        LET&apos;S
+                    </div>
 
-                    <h2 className="text-5xl font-black mt-4">
-                        Interested in working together?
-                    </h2>
+                    <div className="absolute -left-24 -bottom-24 w-80 h-80 bg-white/20 rounded-full blur-3xl opacity-70 group-hover:opacity-100 transition" />
 
-                    <p className="mt-5 text-blue-100 max-w-2xl mx-auto">
-                        Let’s connect for Data Engineer, Data Analyst, BI, or Analytics Engineering opportunities.
-                    </p>
+                    <div className="relative z-10">
+                        <p className="text-blue-100 font-semibold tracking-[0.2em]">
+                            OPEN TO OPPORTUNITIES
+                        </p>
 
-                    <a
-                        href="#contact"
-                        className="
-                            inline-block
-                            mt-8
-                            bg-white
-                            text-blue-600
-                            px-7
-                            py-4
-                            rounded-2xl
-                            font-semibold
-                            hover:bg-blue-50
-                            transition
-                        "
-                    >
-                        Contact Me →
-                    </a>
+                        <h2 className="text-5xl lg:text-6xl font-black mt-5 leading-tight">
+                            Interested in working
+                            <br />
+                            together?
+                        </h2>
+
+                        <p className="mt-6 text-blue-100 max-w-2xl mx-auto leading-8">
+                            Let&apos;s connect for Data Engineer, Data Analyst,
+                            BI, or Analytics Engineering opportunities.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            className="
+                                inline-flex
+                                items-center
+                                gap-3
+                                mt-10
+                                bg-white
+                                text-blue-600
+                                px-8
+                                py-4
+                                rounded-2xl
+                                font-bold
+                                hover:bg-blue-50
+                                hover:-translate-y-1
+                                hover:shadow-xl
+                                transition-all
+                            "
+                        >
+                            Contact Me →
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

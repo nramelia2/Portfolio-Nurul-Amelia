@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
     const [activeSection, setActiveSection] = useState("");
@@ -50,6 +51,8 @@ export default function Navbar() {
                 backdrop-blur-xl
                 border-b
                 border-slate-200/70
+                dark:bg-slate-950/75
+                dark:border-slate-800/80
             "
         >
             <div
@@ -66,13 +69,43 @@ export default function Navbar() {
                 <a
                     href="#"
                     className="
-                        text-2xl
-                        font-black
-                        tracking-tight
-                        text-slate-900
+                        flex
+                        items-center
+                        gap-3
                     "
                 >
-                    Nurul <span className="text-blue-600">Amelia</span>
+                    <div
+                        className="
+                            w-11
+                            h-11
+                            rounded-2xl
+                            bg-gradient-to-br
+                            from-blue-500
+                            to-blue-700
+                            text-white
+                            flex
+                            items-center
+                            justify-center
+                            font-black
+                            text-sm
+                            tracking-tight
+                            shadow-md
+                        "
+                    >
+                        NA
+                    </div>
+
+                    <span
+                        className="
+                            text-2xl
+                            font-black
+                            tracking-tight
+                            text-slate-900
+                            dark:text-white
+                        "
+                    >
+                        Nurul <span className="text-blue-600">Amelia</span>
+                    </span>
                 </a>
 
                 <div
@@ -87,6 +120,8 @@ export default function Navbar() {
                         rounded-full
                         p-2
                         shadow-sm
+                        dark:bg-slate-900
+                        dark:border-slate-700
                     "
                 >
                     {navItems.map((item) => (
@@ -103,7 +138,7 @@ export default function Navbar() {
                                 ${
                                     activeSection === item.href
                                         ? "bg-blue-600 text-white shadow-md"
-                                        : "text-slate-600 hover:text-blue-600 hover:bg-blue-50"
+                                        : "text-slate-600 hover:text-blue-600 hover:bg-blue-50 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800"
                                 }
                             `}
                         >
@@ -112,25 +147,31 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <a
-                    href="https://drive.google.com/drive/folders/1BeWGWyjwa1zBqEeKp5DQp6qtYdztBXG2?usp=sharing"
-                    className="
-                        hidden
-                        md:inline-block
-                        bg-blue-600
-                        text-white
-                        px-5
-                        py-2.5
-                        rounded-full
-                        text-sm
-                        font-semibold
-                        hover:bg-blue-700
-                        hover:-translate-y-0.5
-                        transition-all
-                    "
-                >
-                    Download CV
-                </a>
+                <div className="flex items-center gap-3">
+                    <ThemeToggle />
+
+                    <a
+                        href="/Nurul Amelia-CV.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                            hidden
+                            md:inline-block
+                            bg-blue-600
+                            text-white
+                            px-5
+                            py-2.5
+                            rounded-full
+                            text-sm
+                            font-semibold
+                            hover:bg-blue-700
+                            hover:-translate-y-0.5
+                            transition-all
+                        "
+                    >
+                        Download CV
+                    </a>
+                </div>
             </div>
         </nav>
     );

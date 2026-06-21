@@ -1,4 +1,31 @@
 export default function FeaturedProject() {
+    const features = [
+        "⚙️ ETL Pipeline",
+        "📊 KPI Dashboard",
+        "🔍 Data Validation",
+        "📈 Reporting Automation",
+    ];
+
+    const techStack = ["Python", "SQL", "MySQL", "Grafana", "Metabase", "ETL"];
+
+    const caseStudy = [
+        {
+            label: "Challenge",
+            title: "Complex Operational Data",
+            desc: "Network performance data came from multiple sources and needed to be cleaned, validated, and transformed before it could support operational decisions.",
+        },
+        {
+            label: "Solution",
+            title: "Automated Data Workflow",
+            desc: "Designed ETL workflows, optimized SQL queries, validated KPI data, and developed dashboards for monitoring and reporting.",
+        },
+        {
+            label: "Impact",
+            title: "Faster Insight Delivery",
+            desc: "Improved visibility into KPI trends, reporting consistency, and network performance monitoring.",
+        },
+    ];
+
     return (
         <section
             id="projects"
@@ -10,22 +37,25 @@ export default function FeaturedProject() {
                 from-white
                 via-slate-50
                 to-blue-50/50
+                dark:from-slate-950
+                dark:via-slate-900
+                dark:to-slate-950
             "
         >
-            <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-blue-200/30 blur-3xl rounded-full" />
+            <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-blue-200/30 dark:bg-blue-600/10 blur-3xl rounded-full" />
+            <div className="absolute bottom-20 right-0 w-[420px] h-[420px] bg-indigo-200/30 dark:bg-indigo-600/10 blur-3xl rounded-full" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-
                 <div className="text-center">
-                    <p className="text-blue-600 font-semibold">
+                    <p className="text-blue-600 dark:text-blue-400 font-semibold">
                         FEATURED PROJECT
                     </p>
 
-                    <h2 className="text-5xl font-bold mt-3">
+                    <h2 className="text-5xl font-black mt-3 text-slate-900 dark:text-white">
                         Telecommunication Data Analytics Platform
                     </h2>
 
-                    <p className="mt-5 text-slate-500 max-w-3xl mx-auto leading-8">
+                    <p className="mt-5 text-slate-500 dark:text-slate-300 max-w-3xl mx-auto leading-8">
                         A professional data engineering project focused on ETL pipelines,
                         KPI monitoring, dashboard development, reporting automation,
                         and network performance analytics.
@@ -35,26 +65,34 @@ export default function FeaturedProject() {
                 <div
                     className="
                         mt-20
-                        rounded-[40px]
+                        rounded-[44px]
                         overflow-hidden
                         bg-slate-900
                         text-white
                         shadow-2xl
                         relative
+                        border
+                        border-white/10
+                        dark:bg-gradient-to-br
+                        dark:from-slate-900
+                        dark:via-blue-950
+                        dark:to-slate-950
+                        dark:border-slate-800
                     "
                 >
-                    <div className="absolute right-10 top-0 text-[160px] font-black text-white/5">
+                    <div className="absolute right-10 top-0 text-[170px] font-black text-white/5 select-none">
                         ZTE
                     </div>
 
-                    <div className="grid lg:grid-cols-[1fr_0.9fr]">
+                    <div className="absolute -left-20 -bottom-20 w-[360px] h-[360px] bg-blue-500/20 rounded-full blur-3xl" />
 
+                    <div className="grid lg:grid-cols-[1fr_0.9fr] relative z-10">
                         <div className="p-12">
                             <p className="text-blue-400 font-semibold">
                                 Last Project Data Engineering - Telecommunication
                             </p>
 
-                            <h3 className="text-4xl font-bold mt-4">
+                            <h3 className="text-4xl font-bold mt-4 leading-tight">
                                 Network KPI Monitoring & Reporting System
                             </h3>
 
@@ -66,32 +104,28 @@ export default function FeaturedProject() {
                             </p>
 
                             <div className="grid md:grid-cols-2 gap-4 mt-10">
-                                <div className="bg-white/10 rounded-2xl p-5">
-                                    ⚙️ ETL Pipeline
-                                </div>
-
-                                <div className="bg-white/10 rounded-2xl p-5">
-                                    📊 KPI Dashboard
-                                </div>
-
-                                <div className="bg-white/10 rounded-2xl p-5">
-                                    🔍 Data Validation
-                                </div>
-
-                                <div className="bg-white/10 rounded-2xl p-5">
-                                    📈 Reporting Automation
-                                </div>
+                                {features.map((item) => (
+                                    <div
+                                        key={item}
+                                        className="
+                                            bg-white/10
+                                            rounded-2xl
+                                            p-5
+                                            border
+                                            border-white/10
+                                            backdrop-blur
+                                            hover:bg-white/15
+                                            hover:-translate-y-1
+                                            transition-all
+                                        "
+                                    >
+                                        {item}
+                                    </div>
+                                ))}
                             </div>
 
                             <div className="flex flex-wrap gap-3 mt-10">
-                                {[
-                                    "Python",
-                                    "SQL",
-                                    "MySQL",
-                                    "Grafana",
-                                    "Metabase",
-                                    "ETL",
-                                ].map((tech) => (
+                                {techStack.map((tech) => (
                                     <span
                                         key={tech}
                                         className="
@@ -100,6 +134,8 @@ export default function FeaturedProject() {
                                             bg-blue-500/20
                                             text-blue-300
                                             rounded-full
+                                            border
+                                            border-blue-400/10
                                         "
                                     >
                                         {tech}
@@ -108,7 +144,7 @@ export default function FeaturedProject() {
                             </div>
 
                             <a
-                                href="https://drive.google.com/drive/folders/1kUjT_EPkASgHaRRwXZunxPMDSWfADw94?usp=sharing"
+                                href="/Documentation_ToolsMonitoring.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="
@@ -121,69 +157,60 @@ export default function FeaturedProject() {
                                     rounded-xl
                                     font-semibold
                                     hover:bg-blue-50
-                                    transition
+                                    hover:-translate-y-1
+                                    hover:shadow-xl
+                                    transition-all
                                 "
                             >
                                 View Full Portfolio →
                             </a>
                         </div>
 
-                        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-12 flex items-center">
+                        <div
+                            className="
+                                bg-gradient-to-br
+                                from-blue-600
+                                to-indigo-700
+                                p-12
+                                flex
+                                items-center
+                                dark:from-blue-950
+                                dark:to-indigo-950
+                            "
+                        >
                             <div className="space-y-6 w-full">
+                                {caseStudy.map((item) => (
+                                    <div
+                                        key={item.label}
+                                        className="
+                                            bg-white/15
+                                            rounded-3xl
+                                            p-6
+                                            backdrop-blur
+                                            border
+                                            border-white/10
+                                            hover:bg-white/20
+                                            hover:-translate-y-1
+                                            transition-all
+                                        "
+                                    >
+                                        <p className="text-blue-100">
+                                            {item.label}
+                                        </p>
 
-                                <div className="bg-white/15 rounded-3xl p-6 backdrop-blur">
-                                    <p className="text-blue-100">
-                                        Challenge
-                                    </p>
+                                        <h4 className="text-2xl font-bold mt-2">
+                                            {item.title}
+                                        </h4>
 
-                                    <h4 className="text-2xl font-bold mt-2">
-                                        Complex Operational Data
-                                    </h4>
-
-                                    <p className="mt-3 text-blue-50 leading-7">
-                                        Network performance data came from multiple sources
-                                        and needed to be cleaned, validated, and transformed
-                                        before it could support operational decisions.
-                                    </p>
-                                </div>
-
-                                <div className="bg-white/15 rounded-3xl p-6 backdrop-blur">
-                                    <p className="text-blue-100">
-                                        Solution
-                                    </p>
-
-                                    <h4 className="text-2xl font-bold mt-2">
-                                        Automated Data Workflow
-                                    </h4>
-
-                                    <p className="mt-3 text-blue-50 leading-7">
-                                        Designed ETL workflows, optimized SQL queries,
-                                        validated KPI data, and developed dashboards for
-                                        monitoring and reporting.
-                                    </p>
-                                </div>
-
-                                <div className="bg-white/15 rounded-3xl p-6 backdrop-blur">
-                                    <p className="text-blue-100">
-                                        Impact
-                                    </p>
-
-                                    <h4 className="text-2xl font-bold mt-2">
-                                        Faster Insight Delivery
-                                    </h4>
-
-                                    <p className="mt-3 text-blue-50 leading-7">
-                                        Improved visibility into KPI trends, reporting
-                                        consistency, and network performance monitoring.
-                                    </p>
-                                </div>
-
+                                        <p className="mt-3 text-blue-50 leading-7">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </section>
     );
