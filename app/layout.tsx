@@ -32,38 +32,51 @@ export const metadata: Metadata = {
     "Computer Vision",
   ],
 
-  authors: [{ name: "Nurul Amelia" }],
+  authors: [
+    {
+      name: "Nurul Amelia",
+    },
+  ],
+
   creator: "Nurul Amelia",
 
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/projects/icon.svg",
+    shortcut: "/projects/icon.svg",
+    apple: "/projects/icon.svg",
   },
 
   openGraph: {
     title: "Nurul Amelia | Data Engineer",
     description:
       "Data Engineer, Data Analyst, and AI Research Enthusiast.",
+
     url: "https://nurul-amelia.vercel.app",
+
     siteName: "Nurul Amelia Portfolio",
+
     images: [
       {
-        url: "/og-image.png",
+        url: "/projects/og-image.png",
         width: 1200,
         height: 630,
         alt: "Nurul Amelia Portfolio",
       },
     ],
+
+    locale: "en_US",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
+
     title: "Nurul Amelia | Data Engineer",
+
     description:
       "Data Engineer, Data Analyst, and AI Research Enthusiast.",
-    images: ["/og-image.png"],
+
+    images: ["/projects/og-image.png"],
   },
 };
 
@@ -75,6 +88,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
