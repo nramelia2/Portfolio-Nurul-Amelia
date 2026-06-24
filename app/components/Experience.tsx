@@ -147,7 +147,7 @@ export default function Experience() {
                                         </span>
 
                                         <h3 className="text-4xl font-bold mt-6">
-                                            Data Engineer
+                                            Data Analyst
                                         </h3>
 
                                         <p className="text-xl mt-2 text-blue-100">
